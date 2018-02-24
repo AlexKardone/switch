@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Switch</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+  <body>
+    
+    <div class="square">
+    <img src="http://image.lang-8.com/w200_h200/17f400cbd582c971a912654f4f45c67679da8fdb.jpeg" alt="">
+  </div>
+  <div class="core">
+    <img src="https://static.apkbird.com/media/33c2e4d6b4fb46a79b753c2c4d45d0cd" alt="">
+  </div>
+
+</script>
+    <script src="js/libs.min.js"></script>
+    <script>
+      
+      $(document).ready(function() {
+
+        function fire(e) {
+          switch (e.keyCode) {
+            case 32:
+              $('.core').animate({marginLeft: $(document).width() - 50}, 1000);
+              $('.core').queue(function() {
+                $('.core img').attr('src', 'https://img-fotki.yandex.ru/get/5635/134091466.2a8/0_12eff8_942019cf_S');
+                $(this).dequeue();
+              })
+              break;
+          }
+        }
+
+        addEventListener('keydown', fire);
+      //end
+      })
+
+    </script>
+    <!-- <script src="js/common.js"></script> -->
+  </body>
+</html>

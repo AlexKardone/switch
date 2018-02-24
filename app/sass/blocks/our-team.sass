@@ -1,0 +1,67 @@
+.our-team
+	background-color: $bg-green
+	&__item
+		margin: 0 auto
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-flow: wrap
+		justify-content: center
+		align-content: space-between
+		max-width: 150px
+		height: 275px
+	&__img
+		position: relative
+		&-wrap
+			border-radius: 50%
+			overflow: hidden
+		&::after
+			content: ''
+			position: absolute
+			bottom: -105px
+			left: calc(50% - 2px)
+			width: 2px
+			height: 100px
+			background-color: $darkgreen
+	&__descr
+	&__soc
+		margin: 0 auto
+		padding: 0 4px
+		width: 85px
+		height: 30px
+		font-size: 0
+		line-height: 30px
+		border-radius: 20px
+		background-color: $gray2
+		&-icon
+			margin-right: 8px
+			display: inline-block
+			vertical-align: middle
+			&:last-child
+				margin: 0
+	&__bottom
+		padding: 25px 0
+		background-color: $lightgreen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

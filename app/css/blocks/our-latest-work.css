@@ -1,0 +1,182 @@
+.our-latest-work {
+  /* 3 Columns */
+  /* 4 Columns */
+  /* 5 Columns */
+}
+
+.our-latest-work .controls {
+  padding: 1rem;
+  background: #333;
+  font-size: 0.1px;
+}
+
+.our-latest-work .control {
+  position: relative;
+  display: inline-block;
+  width: 2.7rem;
+  height: 2.7rem;
+  background: #444;
+  cursor: pointer;
+  font-size: 0.1px;
+  color: white;
+  -webkit-transition: background 150ms;
+  -o-transition: background 150ms;
+  transition: background 150ms;
+}
+
+.our-latest-work .control:hover {
+  background: #3f3f3f;
+}
+
+.our-latest-work .control[data-filter]:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -webkit-calc(50% - 6px);
+  top: calc(50% - 6px);
+  left: -webkit-calc(50% - 6px);
+  left: calc(50% - 6px);
+  border: 2px solid currentColor;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  -webkit-transition: background-color 150ms, border-color 150ms;
+  -o-transition: background-color 150ms, border-color 150ms;
+  transition: background-color 150ms, border-color 150ms;
+}
+
+.our-latest-work .control[data-sort]:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  top: -webkit-calc(50% - 6px);
+  top: calc(50% - 6px);
+  left: -webkit-calc(50% - 6px);
+  left: calc(50% - 6px);
+  -webkit-transform: translateY(1px) rotate(45deg);
+  -ms-transform: translateY(1px) rotate(45deg);
+  transform: translateY(1px) rotate(45deg);
+}
+
+.our-latest-work .control[data-sort*=":desc"]:after {
+  -webkit-transform: translateY(-4px) rotate(-135deg);
+  -ms-transform: translateY(-4px) rotate(-135deg);
+  transform: translateY(-4px) rotate(-135deg);
+}
+
+.our-latest-work .mixitup-control-active {
+  background: #393939;
+}
+
+.our-latest-work .mixitup-control-active[data-filter]:after {
+  background: transparent;
+}
+
+.our-latest-work .control:first-of-type {
+  -webkit-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+.our-latest-work .control:last-of-type {
+  -webkit-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.our-latest-work .control[data-filter] + .control[data-sort] {
+  margin-left: .75re;
+}
+
+.our-latest-work .control[data-filter=".green"] {
+  color: #91e6c7;
+}
+
+.our-latest-work .control[data-filter=".blue"] {
+  color: #5ecdde;
+}
+
+.our-latest-work .control[data-filter=".pink"] {
+  color: #d595aa;
+}
+
+.our-latest-work .control[data-filter="none"] {
+  color: #2f2f2f;
+}
+
+.our-latest-work .container {
+  padding: 1rem;
+  text-align: justify;
+  font-size: 0.1px;
+}
+
+.our-latest-work .container:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.our-latest-work .mix,
+.our-latest-work .gap {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.our-latest-work .mix {
+  background: #fff;
+  border-top: .5rem solid currentColor;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.our-latest-work .mix:before {
+  content: '';
+  display: inline-block;
+  padding-top: 56.25%;
+}
+
+.our-latest-work .mix.green {
+  color: #91e6c7;
+}
+
+.our-latest-work .mix.pink {
+  color: #d595aa;
+}
+
+.our-latest-work .mix.blue {
+  color: #5ecdde;
+}
+
+.our-latest-work .mix,
+.our-latest-work .gap {
+  width: -webkit-calc(100%/2 - (((2 - 1) * 1rem) / 2));
+  width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+}
+
+@media screen and (min-width: 541px) {
+  .our-latest-work .mix,
+  .our-latest-work .gap {
+    width: -webkit-calc(100%/3 - (((3 - 1) * 1rem) / 3));
+    width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .our-latest-work .mix,
+  .our-latest-work .gap {
+    width: -webkit-calc(100%/4 - (((4 - 1) * 1rem) / 4));
+    width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .our-latest-work .mix,
+  .our-latest-work .gap {
+    width: -webkit-calc(100%/5 - (((5 - 1) * 1rem) / 5));
+    width: calc(100%/5 - (((5 - 1) * 1rem) / 5));
+  }
+}

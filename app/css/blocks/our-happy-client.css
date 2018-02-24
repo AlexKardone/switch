@@ -1,0 +1,27 @@
+.our-clients {
+  background-color: #fff;
+}
+
+.our-clients__logo {
+  height: 100px;
+  text-align: center;
+}
+
+.our-clients__logo::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.our-clients__logo img {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.our-clients__logo img:hover {
+  -webkit-filter: none;
+  filter: none;
+}

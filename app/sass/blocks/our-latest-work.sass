@@ -1,0 +1,154 @@
+.our-latest-work
+	min-height: 750px
+	.controls
+		text-align: center
+		padding: 1rem
+		font-size: 0.1px
+	.control
+		position: relative
+		display: inline-block
+		// width: 2.7rem
+		height: 2.7rem
+		background: $white
+		cursor: pointer
+		font-size: 10.1px
+		color: inherit
+		transition: background 150ms
+		&:hover
+			background: #3f3f3f
+		// &[data-filter]:after 
+		// 	content: 'Photo'
+		// 	position: absolute
+		// 	width: 10px
+		// 	height: 10px
+		// 	top: calc(50% - 6px)
+		// 	left: calc(50% - 6px)
+		// 	border: 2px solid currentColor
+		// 	border-radius: 2px
+		// 	background: currentColor
+		// 	transition: background-color 150ms, border-color 150ms
+		&[data-sort]:after 
+			content: ''
+			position: absolute
+			width: 10px
+			height: 10px
+			border-top: 2px solid
+			border-left: 2px solid
+			top: calc(50% - 6px)
+			left: calc(50% - 6px)
+			transform:  translateY(1px) rotate(45deg)
+			font-size: 0.1px
+		&[data-sort*=":desc"]:after 
+			transform:  translateY(-4px) rotate(-135deg)
+			font-size: 0.1px
+	.mixitup-control-active 
+		color: $white
+		background: $bg-darkgreen
+	.mixitup-control-active[data-filter]:after 
+		background: transparent
+	.control:first-of-type 
+		border-radius: 50px 0 0 50px
+	.control:last-of-type 
+		border-radius: 0 50px 50px 0
+	.control[data-filter] + .control[data-sort]
+		margin-left: .75re
+	.control[data-filter=".green"] 
+		color: #91e6c7
+	.control[data-filter=".blue"] 
+		color: #5ecdde
+	.control[data-filter=".pink"] 
+		color: #d595aa
+	.control[data-filter="none"] 
+		color: #2f2f2f
+	.mix-container 
+		padding: 1rem
+		text-align: justify
+		font-size: 0.1px
+	.mix-container:after 
+		content: ''
+		display: inline-block
+		width: 100%
+	.mix,
+	.gap 
+		display: inline-block
+		vertical-align: top
+	.mix 
+		background: transparent
+		// border-top: .5rem solid currentColor
+		border-radius: 2px
+		margin-bottom: 1rem
+		position: relative
+		text-align: center
+		&:before 
+			content: ''
+			display: inline-block
+			padding-top: 56.25%
+		&.green 
+			color: #91e6c7
+		&.pink 
+			color: #d595aa
+		&.blue 
+			color: #5ecdde
+		.img-portfolio
+			position: relative
+			display: inline-block
+			width: 140px
+			height: 140px
+			overflow: hidden
+			img
+				width: 100%
+				height: auto
+			&:hover
+				.img-portfolio__descr
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					color: $white
+					background-color: rgba(0,0,0,.8)
+					p, a 
+						font-size: $dfz - 4
+						color: $white
+	.mix,
+	.gap 
+		width: calc(100%/2 - (((2 - 1) * 1rem) / 2))
+		@media screen and (min-width: 541px) 
+			width: calc(90%/3 - (((3 - 1) * 1rem) / 3))
+		@media screen and (min-width: 961px) 
+			width: calc(100%/4 - (((4 - 1) * 1rem) / 4))
+		@media screen and (min-width: 1281px) 
+			width: calc(75%/5 - (((5 - 1) * 1rem) / 5))
+
+
+/* overlay at start */
+.mfp-fade.mfp-bg 
+	opacity: 0
+
+	-webkit-transition: all 0.15s ease-out
+	-moz-transition: all 0.15s ease-out
+	transition: all 0.15s ease-out
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready 
+	opacity: 0.8
+
+	/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing 
+	opacity: 0
+
+
+	/* content at start */
+.mfp-fade.mfp-wrap .mfp-content 
+	opacity: 0
+	-webkit-transition: all 0.15s ease-out
+	-moz-transition: all 0.15s ease-out
+	transition: all 1s ease-out
+
+	/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+	opacity: 1
+
+	/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+	opacity: 0
